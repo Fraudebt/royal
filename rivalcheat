@@ -1,0 +1,38 @@
+local screenGui = Instance.new("ScreenGui")
+local flashFrame = Instance.new("Frame")
+local textLabel = Instance.new("TextLabel")
+
+screenGui.Parent = game.CoreGui
+flashFrame.Size = UDim2.new(1, 0, 1, 0)
+flashFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+flashFrame.Parent = screenGui
+
+textLabel.Size = UDim2.new(0.5, 0, 0.1, 0)  -- Adjust size as needed
+textLabel.Position = UDim2.new(0.25, 0, 0.45, 0)  -- Center the text in the middle of the screen
+textLabel.Font = Enum.Font.SourceSans
+textLabel.Text = "Nigger"
+textLabel.TextColor3 = Color3.fromRGB(255, 0, 0)
+textLabel.BackgroundTransparency = 1  -- Make the background transparent
+textLabel.TextSize = 90  -- Set text size to 90
+textLabel.Visible = false  -- Initially hidden
+textLabel.Parent = screenGui
+
+while true do
+    flashFrame.Visible = true
+    wait(0.1)
+    flashFrame.Visible = false
+    wait(0.1)
+
+    -- Heavy computations to create lag
+    for i = 1, 10000 do
+        local x = 0
+        for j = 1, 100 do
+            x = x + math.sin(i * j)
+        end
+    end
+
+    textLabel.Visible = true
+    wait(0.1)
+    textLabel.Visible = false
+    wait(0.1)
+end
